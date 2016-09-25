@@ -1,20 +1,18 @@
 <?php
 
-class Index {
+class Index extends Controller {
     
     function __construct() {
-        
+        parent::__construct();
     }
     
     public function index($params = false) {
-        echo "Hello world!";
+        $this->view->render("index/index");
     }
     
     public function create($params = false) {
-        if ($params) {
-            echo $params['id'] . "<br>";
-        }
-        echo "Hello from create!";
+        $this->view->msg = $_POST['name'];
+        $this->view->render("index/create");
     }
     
 }

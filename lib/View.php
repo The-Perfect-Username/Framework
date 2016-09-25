@@ -7,9 +7,9 @@ class View {
     }
     
     public function render($name) {
-        require "./apps/views/header.php";
-        require "./apps/views/$name.php";
-        require "./apps/views/footer.php";
+        require "./app/views/header.php";
+        require "./app/views/$name.php";
+        require "./app/views/footer.php";
     }
 
 }

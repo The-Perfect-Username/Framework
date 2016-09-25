@@ -11,9 +11,6 @@ class Router {
     public function checkURL() {
         $url = isset($_GET['url']) ? "/" . $_GET['url'] : "/";
         if (!in_array($url, $this->_uri)) {
-            if () {
-                
-            }
             $this->error();
         }
     }
@@ -64,11 +61,6 @@ class Router {
         }
             
     } 
-    
-    public function post($url, $path) {
-        $dir = isset($_GET['url']) ? "/" . $_GET['url'] : "/";
-        
-    }
     
     private function filterParameters($url_base, $url) {
         $array = array_filter(explode($url_base, $url));
